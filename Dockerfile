@@ -1,7 +1,7 @@
 FROM openjdk:16-slim
 
 ENV FOLDER_NAME="papermc_server"
-ENV PROJECT_NAME="paper" # paper/waterfall/travertine
+ENV PROJECT_NAME="paper"
 ENV MINECRAFT_VERSION=""
 ENV PAPERMC_VERSION="latest"
 ENV RAM="1024MB"
