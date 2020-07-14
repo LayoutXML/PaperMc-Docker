@@ -2,7 +2,7 @@
 
 API_URL="https://papermc.io/api/v1"
 
-if [ -n "$MINECRAFT_VERSION" ]; then
+if [ -n $MINECRAFT_VERSION ]; then
   echo "Minecraft version is required."
   exit 1
 fi
