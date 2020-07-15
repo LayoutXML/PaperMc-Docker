@@ -1,18 +1,18 @@
 #!/bin/bash
 
 API_URL="https://papermc.io/api/v1"
+VERSIONS_JSON_URL="https://launchermeta.mojang.com/mc/game/version_manifest.json"
 
 #Setup environment and validate inputs
 mkdir -p "$FOLDER_NAME"
 cd "$FOLDER_NAME"
 
 if ! [ -f "eula.txt" ]; then
-  echo "eula=true" > "eula.txt"
+  echo "eula=$EULA" > "eula.txt"
 fi
 
 if [ -z $MINECRAFT_VERSION ]; then
-  echo "Minecraft version is required."
-  exit 1
+  MINECRAFT_VERSION=$(curl $VERSIONS_JSON_URL | jq -r '.latest.release')
 fi
 
 #Download jar file

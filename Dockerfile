@@ -15,9 +15,12 @@ ARG RAM="1024M"
 ENV RAM "$RAM"
 ARG JAVA_ARGS=""
 ENV JAVA_ARGS "$JAVA_ARGS"
+ARG EULA="true"
+ENV EULA "$EULA"
 
 RUN apt-get update
 RUN apt-get install -y wget
+RUN apt-get install -y jq
 
 COPY setup.sh ./
 RUN chmod +x ./setup.sh
