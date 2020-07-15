@@ -1,4 +1,5 @@
-FROM openjdk:16-slim
+ARG JDK_VERSION=16-slim
+FROM openjdk:${JDK_VERSION}
 
 ARG FOLDER_NAME="papermc_server"
 ENV FOLDER_NAME "$FOLDER_NAME"
@@ -18,7 +19,7 @@ RUN apt-get install -y wget
 
 COPY setup.sh ./
 RUN chmod +x ./setup.sh
-RUN ./setup.sh
+CMD ["./setup.sh"]
 
 VOLUME "$FOLDER_NAME"
 EXPOSE 25565/tcp
