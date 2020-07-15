@@ -12,7 +12,7 @@ if ! [ -f "eula.txt" ]; then
 fi
 
 if [ -z $MINECRAFT_VERSION ]; then
-  MINECRAFT_VERSION=$(curl $VERSIONS_JSON_URL | jq -r '.latest.release')
+  MINECRAFT_VERSION=$(wget -qO- $VERSIONS_JSON_URL | jq -r ".latest.release")
 fi
 
 #Download jar file
