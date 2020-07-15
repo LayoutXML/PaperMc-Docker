@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 API_URL="https://papermc.io/api/v1"
 
@@ -7,7 +7,7 @@ mkdir -p "$FOLDER_NAME"
 cd "$FOLDER_NAME"
 
 if ! [ -f "eula.txt" ]; then
-  echo "true" > "eula.txt"
+  echo "eula=true" > "eula.txt"
 fi
 
 if [ -z $MINECRAFT_VERSION ]; then
@@ -27,6 +27,6 @@ echo -e "PROJECT_NAME\t$PROJECT_NAME"
 echo -e "MINECRAFT_VERSION:\t$MINECRAFT_VERSION"
 echo -e "PAPERMC_VERSION:\t$PAPERMC_VERSION"
 echo -e "RAM:\t$RAM"
-echo -e "JAVA_ARGS:\t$JAVA_ARGS"
+echo -e "JAVA_ARGS:\t--nogui$JAVA_ARGS"
 
-java "-Xmx$RAM" "-Xms$RAM" "$JAVA_OPTS" -jar "$PROJECT_NAME-$PAPERMC_VERSION.jar" --nogui
+java -Xmx$RAM -Xms$RAM $JAVA_OPTS -jar $PROJECT_NAME-$PAPERMC_VERSION.jar --nogui
