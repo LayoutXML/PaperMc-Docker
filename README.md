@@ -39,6 +39,10 @@ Restart policy|``--restart <type>``|Docker container restart policy. Types: ``no
 
 ## Other Information
 
+[Docker Hub page](https://hub.docker.com/r/layoutxml/papermc-docker)
+
+[GitHub page](https://github.com/LayoutXML/papermc-docker)
+
 ### Author
 
 More information about me and my projects: https://rokas.dev
