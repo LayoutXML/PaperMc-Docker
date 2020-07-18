@@ -2,6 +2,8 @@
 
 A hassle free docker image that allows running a PaperMc Minecraft server in no time. For Linux.
 
+*For vanilla Minecraft server, visit - [Docker Hub page](https://hub.docker.com/r/layoutxml/vanilla-minecraft-docker), [GitHub page](https://github.com/LayoutXML/vanilla-minecraft-docker).*
+
 ## Usage
 
 To use the latest stable version of Minecraft and latest build of PaperMc, run
