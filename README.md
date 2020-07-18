@@ -6,9 +6,8 @@ A hassle free docker image that allows running a PaperMc Minecraft server in no 
 
 To use the latest stable version of Minecraft and latest build of PaperMc, run
 ```
-sudo docker run -p 25565:25565 -v /root/papermc_server:/papermc_server -e EULA=true layoutxml/papermc-docker
+sudo docker run -p 25565:25565 -v /root/papermc_server:/papermc_server -d -ti --restart unless-stopped -e EULA=true layoutxml/papermc-docker
 ```
-Feel free to change the ``/root/papermc_server`` folder to folder of your choice.
 
 ## Options
 
